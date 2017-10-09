@@ -124,7 +124,7 @@ test('\n\n***** SDK Built config update  create flow  *****\n\n', function(t) {
 		t.pass('Successfully enrolled user \'admin\' for orderer');
 
 		// use the config update created by the configtx tool
-		let envelope_bytes = fs.readFileSync(path.join(__dirname, '../../fixtures/channel/mychannel.tx'));
+		let envelope_bytes = fs.readFileSync(path.join(__dirname, '../../fixtures/channel/channel.tx'));
 		config = client.extractChannelConfig(envelope_bytes);
 		t.pass('Successfull extracted the config update from the configtx envelope');
 
