@@ -60,7 +60,7 @@ test('\n\n***** SDK Built config update  create flow  *****\n\n', function(t) {
 	var client = new Client();
 
 	var caRootsPath = ORGS.orderer.tls_cacerts;
-	let data = fs.readFileSync(path.join(__dirname, caRootsPath));
+	let data = fs.readFileSync(caRootsPath);
 	let caroots = Buffer.from(data).toString();
 
 	var orderer = client.newOrderer(
