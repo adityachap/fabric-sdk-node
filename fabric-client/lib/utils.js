@@ -402,7 +402,7 @@ module.exports.readFile = function(path) {
 };
 
 module.exports.getDefaultKeyStorePath = function() {
-	return '/var/fabric-deploy/fabric-samples/hfc-key-store';
+	return path.join(os.homedir(), '.hfc-key-store');
 };
 
 var CryptoKeyStore = function(KVSImplClass, opts) {
