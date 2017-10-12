@@ -39,7 +39,7 @@ test('\n\n***** READ in the genesis block *****\n\n', function(t) {
 	testUtil.resetDefaults();
 
 	// readin the envelope to send to the orderer
-	let normalPath = path.normalize(path.join(__dirname, '../fixtures/channel/genesis.block'));
+	let normalPath = path.normalize(path.join(__dirname, '../fixtures/channel/twoorgs.genesis.block'));
 	var data = fs.readFileSync(normalPath);
 
 	var channel = new Channel('test', 'fake');

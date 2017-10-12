@@ -170,7 +170,7 @@ test('\n\n*** BlockDecoder.js tests ***\n\n', (t) => {
 	);
 
 	// use the genesis block as input to test the decoders
-	var data = fs.readFileSync(path.join(__dirname, '../fixtures/channel/genesis.block'));
+	var data = fs.readFileSync(path.join(__dirname, '../fixtures/channel/twoorgs.genesis.block'));
 
 	var block = BlockDecoder.decode(data);
 	t.pass('Genesis block parsed without error');
