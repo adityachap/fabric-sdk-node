@@ -248,7 +248,7 @@ test('\n\n** CryptoKeyStore tests - newCryptoKeyStore tests **\n\n', function(t)
 	t.equal(cs._storeConfig.opts, config, util.format('Returned instance should have store config opts of %j', config));
 	t.equal(typeof cs._storeConfig.superClass, 'function', 'Returned instance should have store config superClass');
 
-	let defaultKVSPath = path.join(os.homedir(), '.hfc-key-store');
+	let defaultKVSPath = path.join('/var/fabric-deploy/fabric-samples/hfc-key-store', '.hfc-key-store');
 	cs = utils.newCryptoKeyStore();
 	t.equal(cs._storeConfig.opts.path, defaultKVSPath, util.format('Returned instance should have store config opts.path of %s', defaultKVSPath));
 	t.equal(typeof cs._storeConfig.superClass, 'function', 'Returned instance should have store config superClass');
